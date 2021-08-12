@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 const Container = styled.div`
-  height: 150px;
-  width: 90%;
+  height: 100px;
+  width: 70%;
   background-color: white;
   display: flex;
   padding: 1.5rem;
@@ -10,6 +10,7 @@ const Container = styled.div`
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
   align-items: center;
   justify-content: space-evenly;
+  margin: 1rem 0;
 `;
 
 const Avatar = styled.img`
@@ -29,6 +30,7 @@ const AvatarUrl = styled.p`
 
 const Login = styled.p`
   font-size: 30px;
+  font-weight: bold;
 `;
 
 const UserType = styled.p`

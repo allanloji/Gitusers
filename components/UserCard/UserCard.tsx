@@ -6,16 +6,16 @@ import { UserCardProps } from './types';
 /**
  * UserCard
  */
-function UserCard({}: UserCardProps) {
+function UserCard({ avatarUrl, login, type }: UserCardProps) {
   return (
     <Container>
-      <Avatar src='https://avatars.githubusercontent.com/u/432?v=4' />
+      <Avatar src={avatarUrl} alt={`Avatar url for ${login}`} />
       <UserInfoContainer>
-        <Login>Allan</Login>
-        <AvatarUrl>avatar url</AvatarUrl>
+        <Login>{login}</Login>
+        <AvatarUrl>{avatarUrl}</AvatarUrl>
       </UserInfoContainer>
 
-      <UserType>Allan</UserType>
+      <UserType>{type}</UserType>
     </Container>
   );
 }

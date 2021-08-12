@@ -1,5 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 const MyApp = ({ Component, pageProps }: any) => (
   <React.Fragment>
@@ -15,7 +18,9 @@ const MyApp = ({ Component, pageProps }: any) => (
         }
       `}
     </style>
-    <Component {...pageProps} />
+    <QueryClientProvider client={queryClient}>
+      <Component {...pageProps} />
+    </QueryClientProvider>
   </React.Fragment>
 );
 
