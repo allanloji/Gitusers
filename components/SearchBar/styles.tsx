@@ -9,6 +9,7 @@ const Container = styled.div`
   width: 90%;
   border-radius: 50px;
   padding: 0 1.5rem;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
 `;
 
 const TextInput = styled.input`
