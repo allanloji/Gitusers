@@ -1,16 +1,22 @@
 import React from 'react';
 
-import { Container, TextInput } from './styles';
+import { Container, SearchButton, SearchIcon, TextInput } from './styles';
 import { SearchBarProps } from './types';
 
 /**
  * SearchBar
  */
-function SearchBar({}: SearchBarProps) {
+function SearchBar({ onChange, onSubmit, value }: SearchBarProps) {
   return (
     <Container>
-      <TextInput placeholder='Search by name' />
-      <button>Buscar</button>
+      <TextInput
+        placeholder='Search by name'
+        value={value}
+        onChange={event => onChange(event.target.value)}
+      />
+      <SearchButton onClick={onSubmit}>
+        <SearchIcon src='/assets/search.svg' alt='Search icon' />
+      </SearchButton>
     </Container>
   );
 }

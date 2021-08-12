@@ -21,6 +21,7 @@ module.exports = {
     'react/jsx-curly-newline': 0,
     'react/jsx-one-expression-per-line': 0,
     'jsx-quotes': ['error', 'prefer-single'],
+    'object-curly-newline': ['error', { multiline: true }],
   },
   settings: {
     'import/resolver': {
