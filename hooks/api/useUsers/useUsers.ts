@@ -1,9 +1,11 @@
 import axios from 'axios';
 import { useQuery, UseQueryOptions } from 'react-query';
-import { UsersResponse } from './types';
 
-const getUsers = async (user: string): Promise<UsersResponse> => {
-  const url = `https://api.github.com/search/users?q=${user}&per_page=9`;
+import { toStringQueryParams } from 'utils';
+import { Params, UsersResponse } from './types';
+
+const getUsers = async (params: Params): Promise<UsersResponse> => {
+  const url = `https://api.github.com/search/users${toStringQueryParams(params)}`;
 
   const res = await axios.get<UsersResponse>(url);
 
@@ -13,8 +15,8 @@ const getUsers = async (user: string): Promise<UsersResponse> => {
 /**
  * useUsers
  */
-function useUsers(user: string, options?: UseQueryOptions<UsersResponse>) {
-  return useQuery<UsersResponse>(['users', user], () => getUsers(user), options);
+function useUsers(params: Params, options?: UseQueryOptions<UsersResponse>) {
+  return useQuery<UsersResponse>(['users', params], () => getUsers(params), options);
 }
 
 export default useUsers;

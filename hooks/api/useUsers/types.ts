@@ -10,4 +10,12 @@ type UsersResponse = {
   items: User[];
 };
 
-export type { UsersResponse };
+type Params = {
+  q: string;
+  per_page: number;
+  page: number;
+  sort?: string;
+  order?: string;
+};
+
+export type { UsersResponse, Params };

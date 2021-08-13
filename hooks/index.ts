@@ -1,3 +1,4 @@
 import { useUsers } from './api';
+import useSearchParams from './useSearchParams';
 
-export { useUsers };
+export { useUsers, useSearchParams };
