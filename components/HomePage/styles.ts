@@ -31,4 +31,8 @@ const FiltersContainer = styled.div`
   margin: 1rem 0;
 `;
 
-export { ContentContainer, UsersContainer, Total, FiltersContainer };
+const Divider = styled.div`
+  height: 1rem;
+`;
+
+export { ContentContainer, UsersContainer, Total, FiltersContainer, Divider };

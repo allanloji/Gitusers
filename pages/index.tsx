@@ -1,8 +1,10 @@
 import React from 'react';
+import Skeleton from 'react-loading-skeleton';
 
 import { Header, Paginator, SearchBar, Select, UserCard } from 'components';
 import {
   ContentContainer,
+  Divider,
   FiltersContainer,
   Total,
   UsersContainer,
@@ -21,7 +23,7 @@ function Home() {
   });
 
   return (
-    <div>
+    <React.Fragment>
       <Header />
       <ContentContainer>
         <SearchBar
@@ -29,46 +31,57 @@ function Home() {
             setSearch(value);
           }}
         />
-        {!isLoading && (
+        {isLoading && (
+          <React.Fragment>
+            <Divider />
+            <Skeleton height={20} />
+            <Divider />
+            <Skeleton height={20} />
+            <Divider />
+            <UsersContainer>
+              {[...new Array(9)].map(() => (
+                <Skeleton height={120} />
+              ))}
+            </UsersContainer>
+          </React.Fragment>
+        )}
+        {!isLoading && users && users.total_count > 0 && (
           <React.Fragment>
             <Total>
               About {users?.total_count} results (first 1000 displayed due to API limit)
             </Total>
-          </React.Fragment>
-        )}
-        <FiltersContainer>
-          <Select
-            name='perPage'
-            options={[
-              { label: '9 per page', value: '9' },
-              { label: '18 per page', value: '18' },
-              { label: '27 per page', value: '27' },
-            ]}
-            onChange={value => setPerPage(Number(value))}
-          />
-          <Select
-            name='sort'
-            options={[
-              { label: 'Dont sort', value: '' },
-              { label: 'By # of followers', value: 'followers' },
-              { label: 'By # of repositories', value: 'repositories' },
-              { label: 'By date joined', value: 'joined' },
-            ]}
-            onChange={value => setSort(value)}
-          />
-          <Select
-            name='order'
-            options={[
-              { label: 'Any order', value: '' },
-              { label: 'Asc', value: 'asc' },
-              { label: 'Desc', value: 'desc' },
-            ]}
-            onChange={value => setOrder(value)}
-          />
-        </FiltersContainer>
 
-        {!isLoading && (
-          <React.Fragment>
+            <FiltersContainer>
+              <Select
+                name='perPage'
+                options={[
+                  { label: '9 per page', value: '9' },
+                  { label: '18 per page', value: '18' },
+                  { label: '27 per page', value: '27' },
+                ]}
+                onChange={value => setPerPage(Number(value))}
+              />
+              <Select
+                name='sort'
+                options={[
+                  { label: 'Dont sort', value: '' },
+                  { label: 'By # of followers', value: 'followers' },
+                  { label: 'By # of repositories', value: 'repositories' },
+                  { label: 'By date joined', value: 'joined' },
+                ]}
+                onChange={value => setSort(value)}
+              />
+              <Select
+                name='order'
+                options={[
+                  { label: 'Any order', value: '' },
+                  { label: 'Asc', value: 'asc' },
+                  { label: 'Desc', value: 'desc' },
+                ]}
+                onChange={value => setOrder(value)}
+              />
+            </FiltersContainer>
+
             <UsersContainer>
               {users?.items.map(user => (
                 <UserCard
@@ -92,7 +105,7 @@ function Home() {
           </React.Fragment>
         )}
       </ContentContainer>
-    </div>
+    </React.Fragment>
   );
 }
 
