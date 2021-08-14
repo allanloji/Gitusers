@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Paginator, SearchBar, UserCard } from 'components';
+import { Header, Paginator, SearchBar, UserCard } from 'components';
 import { useSearchParams, useUsers } from 'hooks';
 
 function Home({ test }) {
@@ -19,6 +19,7 @@ function Home({ test }) {
 
   return (
     <div>
+      <Header />
       <SearchBar
         onSubmit={value => {
           setSearch(value);

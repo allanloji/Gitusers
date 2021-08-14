@@ -14,7 +14,7 @@ const MyApp = ({ Component, pageProps }: any) => (
       {`
         body {
           margin: 0;
-          background-color: rgb(245, 245, 245);
+          background-color: rgb(18, 18, 18);
         }
       `}
     </style>

@@ -5,11 +5,11 @@ import { SearchAction, SearchActionType } from './types';
 function searchReducer(state: Params, action: SearchAction): Params {
   switch (action.type) {
     case SearchActionType.SET_SEARCH: {
-      return { ...state, q: action.payload };
+      return { ...state, q: action.payload, page: 1 };
     }
 
     case SearchActionType.SET_PER_PAGE: {
-      return { ...state, per_page: action.payload };
+      return { ...state, per_page: action.payload, page: 1 };
     }
 
     case SearchActionType.SET_PAGE: {
