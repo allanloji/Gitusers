@@ -22,4 +22,11 @@ const UsersContainer = styled.div`
   }
 `;
 
-export { ContentContainer, UsersContainer };
+const Total = styled.p`
+  color: rgb(160, 160, 160);
+  font-size: 18px;
+`;
+
+const FiltersContainer = styled.div``;
+
+export { ContentContainer, UsersContainer, Total, FiltersContainer };

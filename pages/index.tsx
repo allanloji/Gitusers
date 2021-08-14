@@ -1,21 +1,23 @@
 import React from 'react';
 
-import { Header, Paginator, SearchBar, UserCard } from 'components';
-import { ContentContainer, UsersContainer } from 'components/HomePage/styles';
+import { Header, Paginator, SearchBar, Select, UserCard } from 'components';
+import {
+  ContentContainer,
+  FiltersContainer,
+  Total,
+  UsersContainer,
+} from 'components/HomePage/styles';
 import { useSearchParams, useUsers } from 'hooks';
 
-function Home({ test }) {
+function Home() {
   const [searchParams, { setSearch, setPage, nextPage, prevPage, setPerPage, setSort, setOrder }] =
     useSearchParams();
 
-  const {
-    data: users,
-    isLoading,
-    refetch,
-  } = useUsers(searchParams, {
+  const { data: users, isLoading } = useUsers(searchParams, {
     enabled: searchParams.q !== '',
     refetchOnWindowFocus: false,
     staleTime: 5000,
+    keepPreviousData: true,
   });
 
   return (
@@ -29,18 +31,35 @@ function Home({ test }) {
         />
         {!isLoading && (
           <React.Fragment>
-            <p>Total: {users?.total_count}</p>{' '}
+            <Total>
+              About {users?.total_count} results (first 1000 displayed due to API limit)
+            </Total>
           </React.Fragment>
         )}
-        <button type='button' onClick={() => setPerPage(9)}>
-          9
-        </button>
-        <button type='button' onClick={() => setPerPage(18)}>
-          18
-        </button>
-        <button type='button' onClick={() => setPerPage(27)}>
-          27
-        </button>
+        <FiltersContainer>
+          <Select
+            label='Items per page'
+            name='perPage'
+            options={[
+              { label: '9 per page', value: '9' },
+              { label: '18 per page', value: '18' },
+              { label: '27 per page', value: '27' },
+            ]}
+            onChange={value => setPerPage(Number(value))}
+          />
+          <Select
+            label='SortBy'
+            name='sort'
+            options={[
+              { label: 'Any order', value: '' },
+              { label: 'By # of followers', value: 'followers' },
+              { label: 'By # of repositories', value: 'repositories' },
+              { label: 'By date joined', value: 'joined' },
+            ]}
+            onChange={value => setSort(value)}
+          />
+        </FiltersContainer>
+
         {!isLoading && (
           <React.Fragment>
             <UsersContainer>
