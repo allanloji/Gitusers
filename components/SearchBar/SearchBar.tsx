@@ -6,7 +6,7 @@ import { SearchBarProps } from './types';
 /**
  * SearchBar
  */
-function SearchBar({ onChange, onSubmit, value }: SearchBarProps) {
+function SearchBar({ onSubmit }: SearchBarProps) {
   const [search, setSearch] = useState('');
   return (
     <Container>
@@ -15,7 +15,13 @@ function SearchBar({ onChange, onSubmit, value }: SearchBarProps) {
         value={search}
         onChange={event => setSearch(event.target.value)}
       />
-      <SearchButton onClick={() => onSubmit(search)}>
+      <SearchButton
+        onClick={() => {
+          if (search !== '') {
+            onSubmit(search);
+          }
+        }}
+      >
         <SearchIcon src='/assets/search.svg' alt='Search icon' />
       </SearchButton>
     </Container>

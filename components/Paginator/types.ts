@@ -5,6 +5,7 @@ type PaginatorProps = {
   setPage: (page: number) => void;
   prevPage: () => void;
   nextPage: () => void;
+  isLoading: boolean;
 };
 
 export type { PaginatorProps };

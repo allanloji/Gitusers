@@ -1,15 +1,24 @@
 import styled from '@emotion/styled';
+import { keyframes } from '@emotion/react';
+
+const scaleUp = keyframes`
+  0%   {margin-top: 0;}
+  100% {margin-top: -5px;}
+`;
 
 const Container = styled.div`
   background-color: rgb(43, 43, 43);
   display: flex;
-  //padding: 1.5rem;
   border-radius: 5px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
-  //align-items: center;
-  //justify-content: space-evenly;
 
-  //width: 100px;
+  @media (min-width: 768px) {
+    :hover {
+      animation: ${scaleUp} 0.5s ease;
+      margin-top: -5px;
+      cursor: pointer;
+    }
+  }
 `;
 
 const AvatarContainer = styled.div<{ color: string }>`

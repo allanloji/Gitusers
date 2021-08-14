@@ -15,19 +15,21 @@ import { colors } from './utils';
 /**
  * UserCard
  */
-function UserCard({ avatarUrl, login, type, index }: UserCardProps) {
-  const color = index % 9;
+function UserCard({ user }: UserCardProps) {
+  const { login, id, avatar_url: avatarUrl, type, html_url: htmlUrl } = user;
+  const color = id % 9;
   return (
-    <Container>
-      <AvatarContainer color={colors[color]}>
-        <Avatar src={avatarUrl} alt={`Avatar url for ${login}`} />
-      </AvatarContainer>
-      <UserInfoContainer>
-        <Login>{login}</Login>
-        {/*<AvatarUrl>{avatarUrl}</AvatarUrl>*/}
-        <UserType>{type}</UserType>
-      </UserInfoContainer>
-    </Container>
+    <a href={htmlUrl} rel='noreferrer noopener' target='_blank'>
+      <Container>
+        <AvatarContainer color={colors[color]}>
+          <Avatar src={avatarUrl} alt={`Avatar url for ${login}`} />
+        </AvatarContainer>
+        <UserInfoContainer>
+          <Login>{login}</Login>
+          <UserType>{type}</UserType>
+        </UserInfoContainer>
+      </Container>
+    </a>
   );
 }
 

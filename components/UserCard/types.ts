@@ -1,8 +1,7 @@
+import { User } from 'hooks/api/useUsers/types';
+
 type UserCardProps = {
-  avatarUrl: string;
-  login: string;
-  type: string;
-  index: number;
+  user: User;
 };
 
 export type { UserCardProps };

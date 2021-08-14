@@ -3,6 +3,7 @@ type User = {
   login: string;
   avatar_url: string;
   type: string;
+  html_url: string;
 };
 
 type UsersResponse = {
@@ -18,4 +19,4 @@ type Params = {
   order?: string;
 };
 
-export type { UsersResponse, Params };
+export type { UsersResponse, Params, User };

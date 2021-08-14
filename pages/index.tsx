@@ -1,7 +1,7 @@
 import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 
-import { Header, Paginator, SearchBar, Select, UserCard } from 'components';
+import { Header, Paginator, SearchBar, SearchMessage, Select, UserCard } from 'components';
 import {
   ContentContainer,
   Divider,
@@ -9,16 +9,22 @@ import {
   Total,
   UsersContainer,
 } from 'components/HomePage/styles';
+import { orderOptions, perPageOptions, sortOptions } from 'components/HomePage/utils';
 import { useSearchParams, useUsers } from 'hooks';
 
 function Home() {
   const [searchParams, { setSearch, setPage, nextPage, prevPage, setPerPage, setSort, setOrder }] =
     useSearchParams();
 
-  const { data: users, isLoading } = useUsers(searchParams, {
+  const {
+    data: users,
+    isLoading,
+    isFetching,
+    isError,
+  } = useUsers(searchParams, {
     enabled: searchParams.q !== '',
     refetchOnWindowFocus: false,
-    staleTime: 5000,
+    staleTime: 300000,
     keepPreviousData: true,
   });
 
@@ -31,6 +37,13 @@ function Home() {
             setSearch(value);
           }}
         />
+
+        {searchParams.q === '' && (
+          <SearchMessage title='Search a user in order to see results' image='💡' />
+        )}
+        {isError && (
+          <SearchMessage title='There was an error getting the users or API limit' image='🤖' />
+        )}
         {isLoading && (
           <React.Fragment>
             <Divider />
@@ -45,7 +58,10 @@ function Home() {
             </UsersContainer>
           </React.Fragment>
         )}
-        {!isLoading && users && users.total_count > 0 && (
+        {!isError && !isLoading && users && users.total_count === 0 && (
+          <SearchMessage title='There are not users with that name' image='👀' />
+        )}
+        {!isError && !isLoading && users && users.total_count > 0 && (
           <React.Fragment>
             <Total>
               About {users?.total_count} results (first 1000 displayed due to API limit)
@@ -54,43 +70,16 @@ function Home() {
             <FiltersContainer>
               <Select
                 name='perPage'
-                options={[
-                  { label: '9 per page', value: '9' },
-                  { label: '18 per page', value: '18' },
-                  { label: '27 per page', value: '27' },
-                ]}
+                options={perPageOptions}
                 onChange={value => setPerPage(Number(value))}
               />
-              <Select
-                name='sort'
-                options={[
-                  { label: 'Dont sort', value: '' },
-                  { label: 'By # of followers', value: 'followers' },
-                  { label: 'By # of repositories', value: 'repositories' },
-                  { label: 'By date joined', value: 'joined' },
-                ]}
-                onChange={value => setSort(value)}
-              />
-              <Select
-                name='order'
-                options={[
-                  { label: 'Any order', value: '' },
-                  { label: 'Asc', value: 'asc' },
-                  { label: 'Desc', value: 'desc' },
-                ]}
-                onChange={value => setOrder(value)}
-              />
+              <Select name='sort' options={sortOptions} onChange={value => setSort(value)} />
+              <Select name='order' options={orderOptions} onChange={value => setOrder(value)} />
             </FiltersContainer>
 
             <UsersContainer>
               {users?.items.map(user => (
-                <UserCard
-                  avatarUrl={user.avatar_url}
-                  login={user.login}
-                  type={user.type}
-                  index={user.id}
-                  key={user.id}
-                />
+                <UserCard user={user} key={user.id} />
               ))}
             </UsersContainer>
 
@@ -101,6 +90,7 @@ function Home() {
               setPage={setPage}
               nextPage={nextPage}
               prevPage={prevPage}
+              isLoading={isFetching}
             />
           </React.Fragment>
         )}
