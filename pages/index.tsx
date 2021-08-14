@@ -38,7 +38,6 @@ function Home() {
         )}
         <FiltersContainer>
           <Select
-            label='Items per page'
             name='perPage'
             options={[
               { label: '9 per page', value: '9' },
@@ -48,15 +47,23 @@ function Home() {
             onChange={value => setPerPage(Number(value))}
           />
           <Select
-            label='SortBy'
             name='sort'
             options={[
-              { label: 'Any order', value: '' },
+              { label: 'Dont sort', value: '' },
               { label: 'By # of followers', value: 'followers' },
               { label: 'By # of repositories', value: 'repositories' },
               { label: 'By date joined', value: 'joined' },
             ]}
             onChange={value => setSort(value)}
+          />
+          <Select
+            name='order'
+            options={[
+              { label: 'Any order', value: '' },
+              { label: 'Asc', value: 'asc' },
+              { label: 'Desc', value: 'desc' },
+            ]}
+            onChange={value => setOrder(value)}
           />
         </FiltersContainer>
 

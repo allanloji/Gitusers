@@ -27,6 +27,8 @@ const Total = styled.p`
   font-size: 18px;
 `;
 
-const FiltersContainer = styled.div``;
+const FiltersContainer = styled.div`
+  margin: 1rem 0;
+`;
 
 export { ContentContainer, UsersContainer, Total, FiltersContainer };

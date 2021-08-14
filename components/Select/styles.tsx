@@ -1,14 +1,6 @@
 import styled from '@emotion/styled';
 
-const Label = styled.label`
-  color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
-`;
-
 const StyledSelect = styled.select`
-  margin-top: 1rem;
   height: 50px;
   color: white;
   border: none;
@@ -17,4 +9,4 @@ const StyledSelect = styled.select`
   padding: 0.5rem;
   font-size: 20px;
 `;
-export { Label, StyledSelect };
+export { StyledSelect };

@@ -4,7 +4,6 @@ type Option = {
 };
 
 type SelectProps = {
-  label: string;
   name: string;
   options: Option[];
   onChange: (value: string) => void;

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Label, StyledSelect } from './styles';
+import { StyledSelect } from './styles';
 import { SelectProps } from './types';
 
 /**
  * Select
  */
-function Select({ label, options, name, onChange }: SelectProps) {
+function Select({ options, name, onChange }: SelectProps) {
   return (
     <React.Fragment>
       <StyledSelect name={name} id={name} onChange={e => onChange(e.target.value)}>
