@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {} from './styles';
+import { Button, Container, PageText } from './styles';
 import { PaginatorProps } from './types';
 
 /**
@@ -19,27 +19,27 @@ function Paginator({
   const totalPages = Math.ceil(maxAvailableResults / perPage);
 
   return (
-    <React.Fragment>
-      <button type='button' onClick={() => setPage(1)} disabled={currentPage === 1}>
+    <Container>
+      <Button type='button' onClick={() => setPage(1)} disabled={currentPage === 1}>
         {'<<'}
-      </button>
-      <button type='button' onClick={prevPage} disabled={currentPage === 1}>
+      </Button>
+      <Button type='button' onClick={prevPage} disabled={currentPage === 1}>
         {'<'}
-      </button>
-      <p>
+      </Button>
+      <PageText>
         {currentPage} of {totalPages}
-      </p>
-      <button type='button' onClick={nextPage} disabled={currentPage === totalPages}>
+      </PageText>
+      <Button type='button' onClick={nextPage} disabled={currentPage === totalPages}>
         {'>'}
-      </button>
-      <button
+      </Button>
+      <Button
         type='button'
         onClick={() => setPage(totalPages)}
         disabled={currentPage === totalPages}
       >
         {'>>'}
-      </button>
-    </React.Fragment>
+      </Button>
+    </Container>
   );
 }
 
