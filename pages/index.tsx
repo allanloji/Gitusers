@@ -59,7 +59,7 @@ function Home() {
           </React.Fragment>
         )}
         {!isError && !isLoading && users && users.total_count === 0 && (
-          <SearchMessage title='There are not users with that name' image='👀' />
+          <SearchMessage title='There are no users with that name' image='👀' />
         )}
         {!isError && !isLoading && users && users.total_count > 0 && (
           <React.Fragment>
