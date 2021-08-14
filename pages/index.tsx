@@ -1,5 +1,6 @@
 import React from 'react';
-import { SearchBar, UserCard } from 'components';
+
+import { Paginator, SearchBar, UserCard } from 'components';
 import { useSearchParams, useUsers } from 'hooks';
 
 function Home({ test }) {
@@ -26,7 +27,6 @@ function Home({ test }) {
       {!isLoading && (
         <React.Fragment>
           <p>Total: {users?.total_count}</p>{' '}
-          <p>Total pages: {Math.ceil(users?.total_count / searchParams.per_page)}</p>
         </React.Fragment>
       )}
       <button type='button' onClick={() => setPerPage(9)}>
@@ -38,17 +38,21 @@ function Home({ test }) {
       <button type='button' onClick={() => setPerPage(27)}>
         27
       </button>
-      {!isLoading &&
-        users?.items.map(user => (
-          <UserCard avatarUrl={user.avatar_url} login={user.login} type={user.type} />
-        ))}
-
-      <button type='button' onClick={prevPage}>
-        INICIO
-      </button>
-      <button type='button' onClick={nextPage}>
-        SIGUIENTE
-      </button>
+      {!isLoading && (
+        <React.Fragment>
+          {users?.items.map(user => (
+            <UserCard avatarUrl={user.avatar_url} login={user.login} type={user.type} />
+          ))}
+          <Paginator
+            currentPage={searchParams.page}
+            perPage={searchParams.per_page}
+            totalResults={users?.total_count ?? 0}
+            setPage={setPage}
+            nextPage={nextPage}
+            prevPage={prevPage}
+          />
+        </React.Fragment>
+      )}
     </div>
   );
 }
