@@ -1,21 +1,32 @@
 import React from 'react';
 
-import { Avatar, AvatarUrl, Container, Login, UserInfoContainer, UserType } from './styles';
+import {
+  Avatar,
+  AvatarContainer,
+  AvatarUrl,
+  Container,
+  Login,
+  UserInfoContainer,
+  UserType,
+} from './styles';
 import { UserCardProps } from './types';
+import { colors } from './utils';
 
 /**
  * UserCard
  */
-function UserCard({ avatarUrl, login, type }: UserCardProps) {
+function UserCard({ avatarUrl, login, type, index }: UserCardProps) {
+  const color = index % 9;
   return (
     <Container>
-      <Avatar src={avatarUrl} alt={`Avatar url for ${login}`} />
+      <AvatarContainer color={colors[color]}>
+        <Avatar src={avatarUrl} alt={`Avatar url for ${login}`} />
+      </AvatarContainer>
       <UserInfoContainer>
         <Login>{login}</Login>
-        <AvatarUrl>{avatarUrl}</AvatarUrl>
+        {/*<AvatarUrl>{avatarUrl}</AvatarUrl>*/}
+        <UserType>{type}</UserType>
       </UserInfoContainer>
-
-      <UserType>{type}</UserType>
     </Container>
   );
 }
