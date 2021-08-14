@@ -1,14 +1,6 @@
 import React from 'react';
 
-import {
-  Avatar,
-  AvatarContainer,
-  AvatarUrl,
-  Container,
-  Login,
-  UserInfoContainer,
-  UserType,
-} from './styles';
+import { Avatar, AvatarContainer, Container, Login, UserInfoContainer, UserType } from './styles';
 import { UserCardProps } from './types';
 import { colors } from './utils';
 

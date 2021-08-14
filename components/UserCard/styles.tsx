@@ -41,14 +41,6 @@ const UserInfoContainer = styled.div`
   word-break: break-all;
 `;
 
-const AvatarUrl = styled.p`
-  font-size: 15px;
-  color: white;
-  line-height: 20px;
-  margin: 0;
-  word-break: break-all;
-`;
-
 const Login = styled.p`
   font-size: 25px;
   font-weight: bold;
@@ -63,4 +55,4 @@ const UserType = styled.p`
   margin: 0.5rem 0;
 `;
 
-export { Container, Avatar, AvatarContainer, AvatarUrl, Login, UserType, UserInfoContainer };
+export { Container, Avatar, AvatarContainer, Login, UserType, UserInfoContainer };

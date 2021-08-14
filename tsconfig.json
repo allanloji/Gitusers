@@ -26,6 +26,7 @@
     "next-env.d.ts",
     "./components/**/*.ts",
     "./components/**/*.tsx",
+    "./**/**/*.test.ts",
     "./utils/**/*.ts",
     "./utils/**/*.tsx",
     "./pages/**/*.ts",

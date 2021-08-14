@@ -28,6 +28,8 @@ function Home() {
     keepPreviousData: true,
   });
 
+  const hasResults = !isError && !isLoading;
+
   return (
     <React.Fragment>
       <Header />
@@ -58,10 +60,10 @@ function Home() {
             </UsersContainer>
           </React.Fragment>
         )}
-        {!isError && !isLoading && users && users.total_count === 0 && (
+        {hasResults && users && users.total_count === 0 && (
           <SearchMessage title='There are no users with that name' image='👀' />
         )}
-        {!isError && !isLoading && users && users.total_count > 0 && (
+        {hasResults && users && users.total_count > 0 && (
           <React.Fragment>
             <Total>
               About {users?.total_count} results (first 1000 displayed due to API limit)
