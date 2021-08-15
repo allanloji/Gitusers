@@ -1,12 +1,11 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import NoSearch from '..';
 
 describe('NoSearch', () => {
-  test('renders successfully', () => {
-    render(<NoSearch />);
-    const element = screen.getByTestId(/test/i);
-    expect(element).toBeInTheDocument();
+  test('Should render', () => {
+    const { container } = render(<NoSearch title='Test message' image='👀' />);
+    expect(container).toMatchSnapshot();
   });
 });
