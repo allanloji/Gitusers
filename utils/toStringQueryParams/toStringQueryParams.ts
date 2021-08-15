@@ -1,7 +1,7 @@
 /**
  * toStringQueryParams
  */
-function toStringQueryParams(params = {}) {
+function toStringQueryParams(params: Object) {
   const keys = Object.keys(params);
   // @ts-ignore
   const queryStringArray = keys.map(key => `${key}=${params[key]}`);
