@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Header from '..';
+import HomePage from '../../../pages';
 
-describe('Header', () => {
+describe('HomePage ', () => {
   test('Should render', () => {
-    const { container } = render(<Header />);
+    const { container } = render(<HomePage />);
     expect(container).toMatchSnapshot();
   });
 });

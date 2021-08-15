@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paginator Should render 1`] = `
+<div>
+  <div
+    class="css-1mkvne5"
+  >
+    <button
+      class="css-q1rq5h"
+      data-testid="firstPage"
+      disabled=""
+      type="button"
+    >
+      &lt;&lt;
+    </button>
+    <button
+      class="css-q1rq5h"
+      data-testid="prevPage"
+      disabled=""
+      type="button"
+    >
+      &lt;
+    </button>
+    <p
+      class="css-v8p8i1"
+    >
+      1
+       of 
+      112
+    </p>
+    <button
+      class="css-q1rq5h"
+      data-testid="nextPage"
+      type="button"
+    >
+      &gt;
+    </button>
+    <button
+      class="css-q1rq5h"
+      data-testid="lastPage"
+      type="button"
+    >
+      &gt;&gt;
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Paginator Should render blocked buttons when is loading 1`] = `
+<div>
+  <div
+    class="css-1mkvne5"
+  >
+    <button
+      class="css-q1rq5h"
+      data-testid="firstPage"
+      disabled=""
+      type="button"
+    >
+      &lt;&lt;
+    </button>
+    <button
+      class="css-q1rq5h"
+      data-testid="prevPage"
+      disabled=""
+      type="button"
+    >
+      &lt;
+    </button>
+    <p
+      class="css-v8p8i1"
+    >
+      1
+       of 
+      112
+    </p>
+    <button
+      class="css-q1rq5h"
+      data-testid="nextPage"
+      disabled=""
+      type="button"
+    >
+      &gt;
+    </button>
+    <button
+      class="css-q1rq5h"
+      data-testid="lastPage"
+      disabled=""
+      type="button"
+    >
+      &gt;&gt;
+    </button>
+  </div>
+</div>
+`;

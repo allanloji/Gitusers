@@ -11,3 +11,5 @@ next.config.js
 next-env.d.ts
 _templates
 .eslintrc.js
+jest.config.js
+jest.setup.js

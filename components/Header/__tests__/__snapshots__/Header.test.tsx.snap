@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Should render 1`] = `
+<div>
+  <div
+    class="css-1op182y"
+  >
+    <h1
+      class="css-r838ov"
+    >
+      gitusers 
+    </h1>
+    <span
+      class="css-dkt9vh"
+    >
+      👦🏻
+    </span>
+    <h2
+      class="css-vkg5qd"
+    >
+      A github user search
+    </h2>
+  </div>
+</div>
+`;

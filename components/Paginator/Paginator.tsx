@@ -24,19 +24,29 @@ function Paginator({
 
   return (
     <Container>
-      <Button type='button' onClick={() => setPage(1)} disabled={isFirstPage}>
+      <Button
+        type='button'
+        onClick={() => setPage(1)}
+        disabled={isFirstPage}
+        data-testid='firstPage'
+      >
         {'<<'}
       </Button>
-      <Button type='button' onClick={prevPage} disabled={isFirstPage}>
+      <Button type='button' onClick={prevPage} disabled={isFirstPage} data-testid='prevPage'>
         {'<'}
       </Button>
       <PageText>
         {currentPage} of {totalPages}
       </PageText>
-      <Button type='button' onClick={nextPage} disabled={isLastPage}>
+      <Button type='button' onClick={nextPage} disabled={isLastPage} data-testid='nextPage'>
         {'>'}
       </Button>
-      <Button type='button' onClick={() => setPage(totalPages)} disabled={isLastPage}>
+      <Button
+        type='button'
+        onClick={() => setPage(totalPages)}
+        disabled={isLastPage}
+        data-testid='lastPage'
+      >
         {'>>'}
       </Button>
     </Container>
