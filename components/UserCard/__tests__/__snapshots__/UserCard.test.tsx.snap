@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserCard renders successfully 1`] = `
+<div>
+  <a
+    href="https://github.com/test123"
+    rel="noreferrer noopener"
+    target="_blank"
+  >
+    <div
+      class="css-1gi9ab3"
+    >
+      <div
+        class="css-g4ys84"
+        color="#F8961E"
+      >
+        <img
+          alt="Avatar url for test"
+          class="css-a6g4fg"
+          src="https://avatars.githubusercontent.com/u/27031?v=4"
+        />
+      </div>
+      <div
+        class="css-1obzys2"
+      >
+        <p
+          class="css-1mceto1"
+        >
+          test
+        </p>
+        <p
+          class="css-19cwc4a"
+        >
+          user
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+`;

@@ -1,12 +1,20 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import UserCard from '..';
 
 describe('UserCard', () => {
   test('renders successfully', () => {
-    render(<UserCard />);
-    const element = screen.getByTestId(/test/i);
-    expect(element).toBeInTheDocument();
+    const user = {
+      id: 1,
+      login: 'test',
+      avatar_url: 'https://avatars.githubusercontent.com/u/27031?v=4',
+      type: 'user',
+      html_url: 'https://github.com/test123',
+    };
+
+    const { container } = render(<UserCard user={user} />);
+
+    expect(container).toMatchSnapshot();
   });
 });
