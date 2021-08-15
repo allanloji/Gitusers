@@ -12,7 +12,7 @@ const setupReactQuery = () => {
 
   const queryClient = new QueryClient({
     defaultOptions: {
-      queries: { retry: false },
+      queries: { retry: false, staleTime: 0 },
     },
   });
 
@@ -21,7 +21,7 @@ const setupReactQuery = () => {
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
 
-  return { wrapper };
+  return { wrapper, queryClient };
 };
 
 export default setupReactQuery;

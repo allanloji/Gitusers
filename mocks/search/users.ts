@@ -50,6 +50,12 @@ const response = {
   ],
 };
 
+const emptyResponse = {
+  total_count: 0,
+  incomplete_results: false,
+  items: [],
+};
+
 const handler = rest.get('https://api.github.com/search/users', (req, res, ctx) =>
   res(
     // Respond with a 200 status code
@@ -58,5 +64,5 @@ const handler = rest.get('https://api.github.com/search/users', (req, res, ctx) 
   ),
 );
 
-export { response };
+export { response, emptyResponse };
 export default handler;

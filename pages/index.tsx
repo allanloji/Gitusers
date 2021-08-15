@@ -53,9 +53,13 @@ function Home() {
             <Divider />
             <Skeleton height={20} />
             <Divider />
-            <UsersContainer>
-              {[...new Array(9)].map(() => (
-                <Skeleton height={120} />
+            <UsersContainer data-testid='skeleton'>
+              {[...new Array(9)].map((user, index) => (
+                <Skeleton
+                  height={120}
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={`${index}-skeleton`}
+                />
               ))}
             </UsersContainer>
           </React.Fragment>
@@ -88,7 +92,7 @@ function Home() {
             <Paginator
               currentPage={searchParams.page}
               perPage={searchParams.per_page}
-              totalResults={users?.total_count ?? 0}
+              totalResults={users.total_count}
               setPage={setPage}
               nextPage={nextPage}
               prevPage={prevPage}

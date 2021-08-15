@@ -1,0 +1,425 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage  Should render 1`] = `
+<div>
+  <div
+    class="css-1op182y"
+  >
+    <h1
+      class="css-r838ov"
+    >
+      gitusers 
+    </h1>
+    <span
+      class="css-dkt9vh"
+    >
+      👦🏻
+    </span>
+    <h2
+      class="css-vkg5qd"
+    >
+      A github user search
+    </h2>
+  </div>
+  <div
+    class="css-1tu4h0j"
+  >
+    <div
+      class="css-1wisk8h"
+    >
+      <input
+        class="css-1bfqk3l"
+        placeholder="Search by name"
+        value=""
+      />
+      <button
+        class="css-zq0wcq"
+        data-testid="submit-bttn"
+      >
+        <img
+          alt="Search icon"
+          class="css-ulohxf"
+          src="/assets/search.svg"
+        />
+      </button>
+    </div>
+    <div
+      class="css-1dszs7t"
+    >
+      <span
+        class="css-gjmu0c"
+      >
+        💡
+      </span>
+      <h1
+        class="css-17s2ops"
+      >
+        Search a user in order to see results
+      </h1>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`HomePage  Should render error message 1`] = `
+<div>
+  <div
+    class="css-1op182y"
+  >
+    <h1
+      class="css-r838ov"
+    >
+      gitusers 
+    </h1>
+    <span
+      class="css-dkt9vh"
+    >
+      👦🏻
+    </span>
+    <h2
+      class="css-vkg5qd"
+    >
+      A github user search
+    </h2>
+  </div>
+  <div
+    class="css-1tu4h0j"
+  >
+    <div
+      class="css-1wisk8h"
+    >
+      <input
+        class="css-1bfqk3l"
+        placeholder="Search by name"
+        value="Test"
+      />
+      <button
+        class="css-zq0wcq"
+        data-testid="submit-bttn"
+      >
+        <img
+          alt="Search icon"
+          class="css-ulohxf"
+          src="/assets/search.svg"
+        />
+      </button>
+    </div>
+    <div
+      class="css-1dszs7t"
+    >
+      <span
+        class="css-gjmu0c"
+      >
+        🤖
+      </span>
+      <h1
+        class="css-17s2ops"
+      >
+        There was an error getting the users or API limit
+      </h1>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`HomePage  Should render message when theres no users 1`] = `
+<div>
+  <div
+    class="css-1op182y"
+  >
+    <h1
+      class="css-r838ov"
+    >
+      gitusers 
+    </h1>
+    <span
+      class="css-dkt9vh"
+    >
+      👦🏻
+    </span>
+    <h2
+      class="css-vkg5qd"
+    >
+      A github user search
+    </h2>
+  </div>
+  <div
+    class="css-1tu4h0j"
+  >
+    <div
+      class="css-1wisk8h"
+    >
+      <input
+        class="css-1bfqk3l"
+        placeholder="Search by name"
+        value="Test"
+      />
+      <button
+        class="css-zq0wcq"
+        data-testid="submit-bttn"
+      >
+        <img
+          alt="Search icon"
+          class="css-ulohxf"
+          src="/assets/search.svg"
+        />
+      </button>
+    </div>
+    <div
+      class="css-1dszs7t"
+    >
+      <span
+        class="css-gjmu0c"
+      >
+        👀
+      </span>
+      <h1
+        class="css-17s2ops"
+      >
+        There are no users with that name
+      </h1>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`HomePage  Should render users 1`] = `
+<div>
+  <div
+    class="css-1op182y"
+  >
+    <h1
+      class="css-r838ov"
+    >
+      gitusers 
+    </h1>
+    <span
+      class="css-dkt9vh"
+    >
+      👦🏻
+    </span>
+    <h2
+      class="css-vkg5qd"
+    >
+      A github user search
+    </h2>
+  </div>
+  <div
+    class="css-1tu4h0j"
+  >
+    <div
+      class="css-1wisk8h"
+    >
+      <input
+        class="css-1bfqk3l"
+        placeholder="Search by name"
+        value="Test"
+      />
+      <button
+        class="css-zq0wcq"
+        data-testid="submit-bttn"
+      >
+        <img
+          alt="Search icon"
+          class="css-ulohxf"
+          src="/assets/search.svg"
+        />
+      </button>
+    </div>
+    <p
+      class="css-1l7d2vk"
+    >
+      About 
+      84430
+       results (first 1000 displayed due to API limit)
+    </p>
+    <div
+      class="css-12xxxyo"
+    >
+      <select
+        class="css-1fhsdaz"
+        id="perPage"
+        name="perPage"
+      >
+        <option
+          value="9"
+        >
+          9 per page
+        </option>
+        <option
+          value="18"
+        >
+          18 per page
+        </option>
+        <option
+          value="27"
+        >
+          27 per page
+        </option>
+      </select>
+      <select
+        class="css-1fhsdaz"
+        id="sort"
+        name="sort"
+      >
+        <option
+          value=""
+        >
+          Dont sort
+        </option>
+        <option
+          value="followers"
+        >
+          By # of followers
+        </option>
+        <option
+          value="repositories"
+        >
+          By # of repositories
+        </option>
+        <option
+          value="joined"
+        >
+          By date joined
+        </option>
+      </select>
+      <select
+        class="css-1fhsdaz"
+        id="order"
+        name="order"
+      >
+        <option
+          value=""
+        >
+          Any order
+        </option>
+        <option
+          value="asc"
+        >
+          Asc
+        </option>
+        <option
+          value="desc"
+        >
+          Desc
+        </option>
+      </select>
+    </div>
+    <div
+      class="css-i7kby6"
+    >
+      <a
+        href="https://github.com/test123"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        <div
+          class="css-1gi9ab3"
+        >
+          <div
+            class="css-1jma1eq"
+            color="#90BE6D"
+          >
+            <img
+              alt="Avatar url for test123"
+              class="css-a6g4fg"
+              src="https://avatars.githubusercontent.com/u/27031?v=4"
+            />
+          </div>
+          <div
+            class="css-1obzys2"
+          >
+            <p
+              class="css-1mceto1"
+            >
+              test123
+            </p>
+            <p
+              class="css-19cwc4a"
+            >
+              User
+            </p>
+          </div>
+        </div>
+      </a>
+      <a
+        href="https://github.com/testjie"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        <div
+          class="css-1gi9ab3"
+        >
+          <div
+            class="css-1p5pmkk"
+            color="#277DA1"
+          >
+            <img
+              alt="Avatar url for testjie"
+              class="css-a6g4fg"
+              src="https://avatars.githubusercontent.com/u/23480729?v=4"
+            />
+          </div>
+          <div
+            class="css-1obzys2"
+          >
+            <p
+              class="css-1mceto1"
+            >
+              testjie
+            </p>
+            <p
+              class="css-19cwc4a"
+            >
+              User
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      class="css-1mkvne5"
+    >
+      <button
+        class="css-q1rq5h"
+        data-testid="firstPage"
+        disabled=""
+        type="button"
+      >
+        &lt;&lt;
+      </button>
+      <button
+        class="css-q1rq5h"
+        data-testid="prevPage"
+        disabled=""
+        type="button"
+      >
+        &lt;
+      </button>
+      <p
+        class="css-v8p8i1"
+      >
+        1
+         of 
+        112
+      </p>
+      <button
+        class="css-q1rq5h"
+        data-testid="nextPage"
+        disabled=""
+        type="button"
+      >
+        &gt;
+      </button>
+      <button
+        class="css-q1rq5h"
+        data-testid="lastPage"
+        disabled=""
+        type="button"
+      >
+        &gt;&gt;
+      </button>
+    </div>
+  </div>
+</div>
+`;
