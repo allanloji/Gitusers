@@ -8,6 +8,7 @@ import { SearchBarProps } from './types';
  */
 function SearchBar({ onSubmit }: SearchBarProps) {
   const [search, setSearch] = useState('');
+
   return (
     <Container>
       <TextInput
@@ -16,6 +17,7 @@ function SearchBar({ onSubmit }: SearchBarProps) {
         onChange={event => setSearch(event.target.value)}
       />
       <SearchButton
+        data-testid='submit-bttn'
         onClick={() => {
           if (search !== '') {
             onSubmit(search);

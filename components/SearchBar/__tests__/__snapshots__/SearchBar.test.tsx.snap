@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar Should render 1`] = `
+<div>
+  <div
+    class="css-1wisk8h"
+  >
+    <input
+      class="css-1bfqk3l"
+      placeholder="Search by name"
+      value=""
+    />
+    <button
+      class="css-zq0wcq"
+      data-testid="submit-bttn"
+    >
+      <img
+        alt="Search icon"
+        class="css-ulohxf"
+        src="/assets/search.svg"
+      />
+    </button>
+  </div>
+</div>
+`;
