@@ -1,8 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app). It includes configuration of Typescript, Emotionjs, Eslint and Prettier
 
-## Getting Started
+# GitUsers
+GitUsers is page where you can search for github users, based on their name. It also includes some filtering and ordering tools.
 
-First, run the development server:
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/33562292/129494751-2d51b3b6-77cf-4f10-aa75-d54f334df129.gif" alt="Gitusers demo" />
+</p>
+
+## 🧑‍💻 Installation
+
+First install dependencies with yarn or npm
+
+```bash
+yarn
+```
+Once finished run the development server:
 
 ```bash
 yarn dev
@@ -10,4 +21,13 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 🤖 Stack
+- [NextJS](https://nextjs.org/) - as React framework
+- [Emotion](https://emotion.sh/) - for styling
+- [React-Query](https://react-query.tanstack.com/) - for data fetching
+- [Jest](https://jestjs.io/) - for unit testing
+- [React testing library](https://testing-library.com/) - for testing react components
+- [MSW](https://mswjs.io/) - for api mocking
+
+
+
