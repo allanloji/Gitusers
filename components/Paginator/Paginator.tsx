@@ -4,7 +4,7 @@ import { Button, Container, PageText } from './styles';
 import { PaginatorProps } from './types';
 
 /**
- * Paginator
+ * Paginator component
  */
 function Paginator({
   currentPage,

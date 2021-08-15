@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, Emoji, Subtitle, Title } from './styles';
 
 /**
- * Header
+ * Header component
  */
 function Header() {
   return (

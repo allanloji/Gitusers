@@ -4,7 +4,7 @@ import { StyledSelect } from './styles';
 import { SelectProps } from './types';
 
 /**
- * Select
+ * Select input component
  */
 function Select({ options, name, onChange }: SelectProps) {
   return (

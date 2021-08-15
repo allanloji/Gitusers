@@ -5,7 +5,7 @@ import { UserCardProps } from './types';
 import { colors } from './utils';
 
 /**
- * UserCard
+ * UserCard component, shows user info
  */
 function UserCard({ user }: UserCardProps) {
   const { login, id, avatar_url: avatarUrl, type, html_url: htmlUrl } = user;

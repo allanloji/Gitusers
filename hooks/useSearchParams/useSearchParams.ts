@@ -37,8 +37,7 @@ function searchReducer(state: Params, action: SearchAction): Params {
 }
 
 /**
- * useSearchParams
- * returns useSearchParams
+ * useSearchParams- custom hook to manage current state of filters and query params
  */
 function useSearchParams() {
   const [state, dispatch] = useReducer(searchReducer, { q: '', per_page: 9, page: 1 });

@@ -4,7 +4,7 @@ import { Container, Emoji, Title } from './styles';
 import { SearchMessageProps } from './types';
 
 /**
- * SearchMessage
+ * SearchMessage component
  */
 function SearchMessage({ image, title }: SearchMessageProps) {
   return (
