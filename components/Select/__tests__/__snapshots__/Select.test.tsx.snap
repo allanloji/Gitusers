@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Should render 1`] = `
+<div>
+  <select
+    class="css-1fhsdaz"
+    id="perPage"
+    name="perPage"
+  >
+    <option
+      value=""
+    >
+      Any order
+    </option>
+    <option
+      value="asc"
+    >
+      Asc
+    </option>
+    <option
+      value="desc"
+    >
+      Desc
+    </option>
+  </select>
+</div>
+`;
