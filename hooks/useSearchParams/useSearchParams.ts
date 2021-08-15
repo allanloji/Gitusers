@@ -2,7 +2,9 @@ import { Params } from 'hooks/api/useUsers/types';
 import { useCallback, useReducer } from 'react';
 import { SearchAction, SearchActionType } from './types';
 
+// eslint-disable-next-line consistent-return
 function searchReducer(state: Params, action: SearchAction): Params {
+  // eslint-disable-next-line default-case
   switch (action.type) {
     case SearchActionType.SET_SEARCH: {
       return { ...state, q: action.payload, page: 1 };
@@ -30,10 +32,6 @@ function searchReducer(state: Params, action: SearchAction): Params {
 
     case SearchActionType.SET_ORDER: {
       return { ...state, order: action.payload };
-    }
-
-    default: {
-      return state;
     }
   }
 }

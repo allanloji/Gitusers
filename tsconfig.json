@@ -19,7 +19,9 @@
       "hooks/*": ["./hooks/*"],
       "pages/*": ["./pages/*"],
       "static/*": ["./public/*"],
-      "utils/*": ["./utils/*"]
+      "utils/*": ["./utils/*"],
+      "jest/*": ["./jest/*"],
+      "mocks/*": ["./mocks/*"]
     }
   },
   "exclude": ["node_modules"],
@@ -32,6 +34,8 @@
     "./utils/**/*.tsx",
     "./pages/**/*.ts",
     "./pages/**/*.tsx",
-    "./pages/**/*.js"
+    "./mocks/**/*.ts",
+    "./jest/**/**.ts",
+    "./jest/**/**.tsx"
   ]
 }

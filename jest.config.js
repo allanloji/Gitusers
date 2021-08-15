@@ -21,5 +21,7 @@ module.exports = {
     '^hooks/(.*)$': '<rootDir>/hooks/$1',
     '^pages/(.*)$': '<rootDir>/pages/$1',
     '^utils/(.*)$': '<rootDir>/utils/$1',
+    '^jest/(.*)$': '<rootDir>/jest/$1',
+    '^mocks(.*)$': '<rootDir>/mocks/$1',
   },
 };
