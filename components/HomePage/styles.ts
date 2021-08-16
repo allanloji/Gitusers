@@ -5,6 +5,10 @@ const ContentContainer = styled.div`
   padding: 4rem 6rem;
   max-width: 1500px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
+  }
 `;
 
 const UsersContainer = styled.div`

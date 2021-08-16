@@ -15,6 +15,9 @@ const Title = styled.h1`
   font-size: 120px;
   font-weight: bold;
   margin: 0.5rem;
+  @media (max-width: 768px) {
+    font-size: 80px;
+  }
 `;
 
 const Emoji = styled.span`
