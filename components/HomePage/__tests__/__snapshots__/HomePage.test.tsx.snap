@@ -6,7 +6,7 @@ exports[`HomePage  Should render 1`] = `
     class="css-1op182y"
   >
     <h1
-      class="css-r838ov"
+      class="css-1i1wdm8"
     >
       gitusers 
     </h1>
@@ -22,7 +22,7 @@ exports[`HomePage  Should render 1`] = `
     </h2>
   </div>
   <div
-    class="css-1tu4h0j"
+    class="css-16fhlax"
   >
     <div
       class="css-1wisk8h"
@@ -67,7 +67,7 @@ exports[`HomePage  Should render error message 1`] = `
     class="css-1op182y"
   >
     <h1
-      class="css-r838ov"
+      class="css-1i1wdm8"
     >
       gitusers 
     </h1>
@@ -83,7 +83,7 @@ exports[`HomePage  Should render error message 1`] = `
     </h2>
   </div>
   <div
-    class="css-1tu4h0j"
+    class="css-16fhlax"
   >
     <div
       class="css-1wisk8h"
@@ -128,7 +128,7 @@ exports[`HomePage  Should render message when theres no users 1`] = `
     class="css-1op182y"
   >
     <h1
-      class="css-r838ov"
+      class="css-1i1wdm8"
     >
       gitusers 
     </h1>
@@ -144,7 +144,7 @@ exports[`HomePage  Should render message when theres no users 1`] = `
     </h2>
   </div>
   <div
-    class="css-1tu4h0j"
+    class="css-16fhlax"
   >
     <div
       class="css-1wisk8h"
@@ -189,7 +189,7 @@ exports[`HomePage  Should render users 1`] = `
     class="css-1op182y"
   >
     <h1
-      class="css-r838ov"
+      class="css-1i1wdm8"
     >
       gitusers 
     </h1>
@@ -205,7 +205,7 @@ exports[`HomePage  Should render users 1`] = `
     </h2>
   </div>
   <div
-    class="css-1tu4h0j"
+    class="css-16fhlax"
   >
     <div
       class="css-1wisk8h"
